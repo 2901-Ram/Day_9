@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .bd{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body >
+   <center> <h1>Registration Form</h1></center>
+    <div class="bd">
+    <form action="/submit" method="POST">
+        <!-- Text Inputs -->
+        <label for="username"><b>Username:</b></label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="psw"><b>Password:</b></label>
+        <input type="password" id="psw" name="psw" pattern="(?=.[A-Z](?=.[a-z])(?=.[!@#$%^&])(?=.*[0-9])[A-Za-z!@#$%^&*0-9]){8,}" required><br><br>
+
+        <!-- Email Input -->
+        <label for="email"><b>Email:</b></label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- URL Input -->
+        <label for="website"><b>Website:</b></label>
+        <input type="url" id="website" name="website"><br><br>
+
+        <!-- Telephone Input -->
+        <label for="phone"><b>Phone:</b></label>
+        <input type="tel" id="phone" pattern="[0-9]{1,10}" name="phone"><br><br>
+
+        <!-- Date Input -->
+        <label for="dob"><b>Date of Birth:</b></label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <!-- Time Input -->
+        <label for="appt"><b>Preferred Appointment Time:</b></label>
+        <input type="time" id="appt" name="appt"><br><br>
+
+        <!-- Color Picker -->
+        <label for="favcolor"><b>Favorite Color:</b></label>
+        <input type="color" id="favcolor" name="favcolor"><br><br>
+
+        <!-- Number Input -->
+        <label for="quantity"><b>Quantity:</b></label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+
+        <!-- Range Input -->
+        <label for="rating"><b>Satisfaction Rating (1-10):</b></label>
+        <input type="range" id="rating" name="rating" min="1" max="10"><br><br>
+
+        <!-- Radio Buttons -->
+        <p><b>Gender:</b></p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male"><b>Male</b></label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female"><b>Female</b></label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other"><b>Other</b></label><br><br>
+
+        <!-- Checkbox -->
+        <label for="subscribe"><b>Subscribe to Newsletter:</b></label>
+        <input type="checkbox" id="subscribe" name="subscribe"><br><br>
+
+        <!-- Select Dropdown -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+        </select><br><br>
+
+        <!-- File Input -->
+        <label for="profilepic"><b>Upload Profile Picture:</b></label>
+        <input type="file" id="profilepic" name="profilepic"><br><br>
+
+        <!-- Hidden Input -->
+        <input type="hidden" id="userid" name="userid" value="12345">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Register">
+    </form></div>
+</body>
+</html>
